@@ -1,3 +1,5 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 const path = require("path");
 const HtmlWebpackPlugin= require('html-webpack-plugin');
 module.exports = {
