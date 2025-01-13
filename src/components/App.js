@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
  import Tours from './Tours';
- import Loading from './Loding';
+ import Loading from './Loading';
  import toursData from './toursData.json'; // Import JSON data
 
  const App = () => {
