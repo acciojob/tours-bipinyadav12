@@ -5,7 +5,7 @@ function Tours({ tours, removeTour }) {
   return (
     <section className="tours">
       {tours.map((tour) => (
-        <Tour key={tour.id}  id={`tour-item-para-${tour.id}`} {...tour} removeTour={removeTour} />
+        <Tour key={tour.id}   {...tour} removeTour={removeTour} />
       ))}
     </section>
   );
