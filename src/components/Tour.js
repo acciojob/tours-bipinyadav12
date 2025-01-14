@@ -9,7 +9,7 @@ function Tour({ id, name, info, image, price, removeTour }) {
       <div className="tour-details">
         <h3 className="tour-name">{name}</h3>
         <h4 className="tour-price">${price}</h4>
-        <p className="tour-info">
+        <p className="tour-info" id={`tour-item-para-${id}`}>
           {showMore ? info : `${info.substring(0, 200)}...`}
           <button
             onClick={() => setShowMore(!showMore)}
@@ -18,7 +18,7 @@ function Tour({ id, name, info, image, price, removeTour }) {
             {showMore ? 'Show less' : 'Read more'}
           </button>
         </p>
-        <button id={`delete-btn-${tour.id}`} onClick={() => removeTour(id)} className="btn-remove">
+        <button id={`delete-btn-${id}`} onClick={() => removeTour(id)} className="btn-remove">
           Not Interested
         </button>
       </div>
