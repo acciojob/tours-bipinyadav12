@@ -18,7 +18,7 @@ function Tour({ id, name, info, image, price, removeTour }) {
             {showMore ? 'Show less' : 'Read more'}
           </button>
         </p>
-        <button onClick={() => removeTour(id)} className="btn-remove">
+        <button id={`delete-btn-${tour.id}`} onClick={() => removeTour(id)} className="btn-remove">
           Not Interested
         </button>
       </div>
