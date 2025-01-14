@@ -36,3 +36,5 @@ const toursData = [
     }
   ]
   
+
+export default toursData;
