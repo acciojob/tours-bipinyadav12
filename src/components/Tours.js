@@ -1,14 +1,14 @@
 import React from 'react';
 import Tour from './Tour';
 
-
-const Tours = ({ tours, removeTour }) => {
+function Tours({ tours, removeTour }) {
   return (
-    <div className="tours">
+    <section className="tours">
       {tours.map((tour) => (
-        <Tour key={tour.id} tour={tour} removeTour={removeTour} />
+        <Tour key={tour.id} {...tour} removeTour={removeTour} />
       ))}
-    </div>
+    </section>
   );
-};
+}
+
 export default Tours;
