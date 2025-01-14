@@ -1,19 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import Loading from './Loading';
-import Tours from './Tours';
-
-const API_URL = 'https://api.example.com/tours'; // Replace with your API endpoint
+import React, { useState } from 'react';
+import toursData from './data';
 
 function App() {
-  const [loading, setLoading] = useState(true);
-  const [tours, setTours] = useState([]);
+  const [tours, setTours] = useState(toursData);
 
-  const fetchTours = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch(API_URL);
-      const data = await response.json();
-      setTours(data);
-      setLoading(false);
-    } catch (error) {
-      console.error('Error fetching tours:', error);
+  const removeTour = (id) => {
+    setTours(tours.filter((tour) => tour.id !== id));
+  };
+
+  return <Tours tours={tours} removeTour={removeTour} />;
+}
+
+export default App;
